@@ -6,7 +6,7 @@ RUN echo 'deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/azurecore/ tr
 RUN apt-get install -y bzip2 libfontconfig
 
 RUN mkdir /download && cd /download
-RUN https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN wget https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /usr/local/share/
 RUN rm -rf phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
